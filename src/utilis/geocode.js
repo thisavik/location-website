@@ -18,6 +18,7 @@ const geocode = (address, callback) => {
       } else if (body.features.length === 0) {
         callback("Location not found. Try with another Location !!", undefined);
       } else {
+        console.log(body.features[0])
         callback(undefined, {
           latitude: body.features[0].center[1],
           longitude: body.features[0].center[0],
